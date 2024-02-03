@@ -43,8 +43,19 @@ const variants = {
  * @param className Custom classes to be applied to the element.
  * @param children Child elements to be rendered within the component.
  */
-const Text = ({ variant, className, href, children }) => (
-  <p>{href ? <Link href={href}>{children}</Link> : children}</p>
+const Text = ({ variant, className, href, children }: TextProps) => (
+  <p className={cn(className, variants[variant])}>
+    {href ? (
+      <Link
+        href={href}
+        className="min-w-0 overflow-hidden text-ellipsis whitespace-nowrap"
+      >
+        {children}
+      </Link>
+    ) : (
+      children
+    )}
+  </p>
 );
 
 export default Text;

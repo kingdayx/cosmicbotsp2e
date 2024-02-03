@@ -46,7 +46,6 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       };
       return (
         <div>
-          <div>hey</div>
           <WalletMultiButton onClick={connectWallet} />
         </div>
       );

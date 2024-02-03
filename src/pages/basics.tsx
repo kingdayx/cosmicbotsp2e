@@ -7,12 +7,8 @@ const Basics: NextPage = (props) => {
     <div>
       <Head>
         <title>Solana Scaffold</title>
-        <meta
-          name="description"
-          content="Basic Functionality"
-        />
+        <meta name="description" content="Basic Functionality" />
       </Head>
-      <BasicsView />
     </div>
   );
 };

@@ -1,0 +1,178 @@
+.HeaderContainer {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  background: url("../assets/bg.png");
+}
+.HeaderMobileContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background: url("../assets/mobileScreen.svg");
+}
+.HeaderContainer1 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: -5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.HeaderNavWrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.HeaderImage {
+  height: 10rem;
+}
+
+.HeaderGame {
+  position: relative;
+  top: -3rem;
+  right: 7rem;
+  bottom: 5rem;
+  height: 40rem;
+}
+
+.HeaderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.7rem;
+  position: relative;
+  left: 1rem;
+  width: 10rem;
+  background: url("../assets/button.svg");
+  background-repeat: no-repeat;
+  height: 3rem;
+  text-decoration: none;
+}
+
+.HeaderButton:active {
+  transform: scale(0.9);
+}
+
+.HeaderBotButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  min-width: 8rem;
+  background: url("../assets/button1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2rem;
+}
+
+.HeaderBotButton:active {
+  transform: scale(0.9);
+}
+
+.HeaderTopBar {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.HeaderTopBar1 {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.HeaderTokens {
+  display: flex;
+  position: relative;
+  left: 2rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-top: 1rem;
+}
+.HeaderTokens1 {
+  display: flex;
+  position: relative;
+  left: -10%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-top: 1rem;
+}
+
+.HeaderToken {
+  width: 2rem;
+}
+
+.HeaderLightning {
+  position: relative;
+  right: 3rem;
+  width: 2rem;
+}
+
+.HeaderPotion {
+  position: relative;
+  left: 3.5rem;
+  width: 2rem;
+}
+
+.HeaderEnergyBar {
+  position: relative;
+  max-height: 2rem;
+  top: 1rem;
+  left: 7.5rem;
+  right: 2rem;
+  width: 13rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2680eb;
+  z-index: 2;
+  background: #023059;
+}
+
+.HeaderEnergyBar1 {
+  position: relative;
+  max-height: 2rem;
+  top: 1rem;
+  left: 16%;
+  width: 13rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2680eb;
+  z-index: 2;
+  background: #023059;
+}
+
+.HeaderTokenDeposit {
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  color: white;
+}
+
+.HeaderBottomBar {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  padding-left: 1rem;
+  margin-right: 1rem;
+  justify-content: space-between;
+}

@@ -421,12 +421,14 @@ export default function Market() {
 
         <HeaderMobile className="scrollbars">
           {NFTs.map((index, key) => {
-            return <MarketNFTImages onClick={() => setNFTs(index.page)} />;
+            return (
+              <MarketNFTImages key={key} onClick={() => setNFTs(index.page)} />
+            );
           })}
         </HeaderMobile>
         <MarketNFTData>
           {NFTs.map((item, key) => {
-            if (nfts === item.page) return <div />;
+            if (nfts === item.page) return <div key={key} />;
           })}
         </MarketNFTData>
 
@@ -470,12 +472,17 @@ export default function Market() {
         <MarketContainer className="scrollbars">
           <MarketNFTsList className="scrollbars">
             {NFTs.map((index, key) => {
-              return <MarketNFTImages onClick={() => setNFTs(index.page)} />;
+              return (
+                <MarketNFTImages
+                  key={key}
+                  onClick={() => setNFTs(index.page)}
+                />
+              );
             })}
           </MarketNFTsList>
           <MarketNFTData>
             {NFTs.map((item, key) => {
-              if (nfts === item.page) return <div />;
+              if (nfts === item.page) return <div key={key} />;
             })}
           </MarketNFTData>
         </MarketContainer>

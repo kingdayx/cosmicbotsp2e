@@ -70,13 +70,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       <Context>
         <ContextProvider>
           {loggedIn ? (
-            renderLogin()
-          ) : (
             <div>
               <Notifications />
               <AppBar />
               <Component {...pageProps} />
             </div>
+          ) : (
+            renderLogin()
           )}
         </ContextProvider>
       </Context>

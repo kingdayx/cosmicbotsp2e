@@ -45,12 +45,14 @@ a {
 
 .HeaderImage {
   height: 35rem;
+  width: auto;
 }
 
 .HeaderContainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: auto;
   background: url("../assets/bg.png");
   justify-content: center;
 }
@@ -63,6 +65,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
 }
 
 /* example: override wallet button style */

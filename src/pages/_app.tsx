@@ -10,6 +10,7 @@ import logo from "../assets/logo.svg";
 import Header from "../pages/Header";
 import Market from "../pages/Market";
 import Play from "../pages/Play";
+import bg from "../assets/bg.png";
 import React, { useEffect, useState, useMemo } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
@@ -74,9 +75,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
             <div>
               <Notifications />
               <AppBar />
-              <ContentContainer>
-                <Component {...pageProps} />
-              </ContentContainer>
+              <Component {...pageProps} />
             </div>
           )}
         </ContextProvider>

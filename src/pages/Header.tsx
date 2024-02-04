@@ -20,11 +20,13 @@ import token3 from "../assets/token3.svg";
 
 import lightning from "../assets/lightning.svg";
 import potion from "../assets/potion.svg";
+import Image from "next/image";
 
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding-top: 5rem;
   background: url("./assets/bg.png");
 `;
 const HeaderMobileContainer = styled.div`
@@ -54,11 +56,11 @@ const HeaderNavWrapper = styled.div`
   width: 100%;
 `;
 
-const HeaderImage = styled.img`
+const HeaderImage = styled(Image)`
   height: 10rem;
 `;
 
-const HeaderGame = styled.img`
+const HeaderGame = styled(Image)`
   position: relative;
   top: -4rem;
   right: 7rem;
@@ -94,12 +96,12 @@ const HeaderTokens1 = styled.div`
   margin-top: 1rem;
 `;
 
-const HeaderLightning = styled.img`
+const HeaderLightning = styled(Image)`
   position: relative;
   right: 3rem;
   width: 2rem;
 `;
-const HeaderPotion = styled.img`
+const HeaderPotion = styled(Image)`
   position: relative;
   left: 3.5rem;
   width: 2rem;
@@ -148,7 +150,7 @@ const MarketNFTsList = styled.div`
   }
 `;
 
-const HeaderNFTAsset = styled.img`
+const HeaderNFTAsset = styled(Image)`
   height: 10rem;
   weight: 10rem;
   float: left;
@@ -160,11 +162,11 @@ const HeaderNFTContainer = styled.div`
   flex-direction: column;
 `;
 
-const MarketNFTs = styled.img`
+const MarketNFTs = styled(Image)`
   height: 5rem;
   cursor: pointer;
 `;
-const MarketChar = styled.img`
+const MarketChar = styled(Image)`
   position: relative;
   top: 1rem;
   height: 3rem;
@@ -198,7 +200,7 @@ const HeaderTokens = styled.div`
   z-index: 2;
 `;
 
-const HeaderToken = styled.img`
+const HeaderToken = styled(Image)`
   width: 2rem;
   z-index: 10;
 `;
@@ -219,7 +221,7 @@ const HeaderTokenContainer = styled.div`
   right: 20%;
 `;
 
-const HeaderTopBar = styled.img`
+const HeaderTopBar = styled(Image)`
   position: absolute;
   top: 0;
   z-index: 1;
@@ -259,7 +261,7 @@ const HeaderBottomBarContainer = styled.div`
   bottom: 0;
 `;
 
-const HeaderBotomBarBG = styled.img`
+const HeaderBotomBarBG = styled(Image)`
   height: 100%;
   width: 100%;
 `;
@@ -388,7 +390,7 @@ export default function Header() {
           </HeaderEnergyBar1>
         </HeaderNavWrapper>
         <HeaderGame src={game} alt="game screen"></HeaderGame>
-        <MarketContainer className="scrollbar">
+        {/* <MarketContainer className="scrollbar">
           <MarketNFTsList>
             {data.map((value, key) => {
               return (
@@ -396,30 +398,30 @@ export default function Header() {
                   <HeaderAssetID>assetId: {value.asset_id}</HeaderAssetID>
                   <HeaderAssetName>name: {value.name}</HeaderAssetName>
                   <HeaderNFTAsset
-                    src={`https://atomichub-ipfs.com/ipfs/${value.data.img}`}
+                    src={`https://atomichub-ipfs.com/ipfs/${value.data(Image)}`}
                     alt={value.data.name}
                   />
                 </HeaderNFTContainer>
-              );
+              );.img
             })}
           </MarketNFTsList>
-        </MarketContainer>
+        </MarketContainer> */}
         <HeaderContainer1>
           {/* <Link to="/home" style={{ textDecorationLine: "none" }}>
             <HeaderButton style={{ backgroundImage: `url(${button})` }} >Home</HeaderButton>{" "}
           </Link> */}
           <Link href="/mycards" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               My Cards
             </HeaderButton>
           </Link>
           <Link href="/market" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               Market
             </HeaderButton>
           </Link>
           <Link href="/play" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               Play
             </HeaderButton>
           </Link>

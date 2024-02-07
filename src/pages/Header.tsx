@@ -43,6 +43,7 @@ const HeaderContainer1 = styled.div`
   flex-direction: row;
   position: relative;
   top: -7em;
+  left: 1.5rem;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -63,7 +64,7 @@ const HeaderImage = styled(Image)`
 const HeaderGame = styled(Image)`
   position: relative;
   top: -4rem;
-  right: 7rem;
+  left: 7rem;
   bottom: 5rem;
   height: 30rem;
 `;
@@ -389,7 +390,7 @@ export default function Header() {
             <HeaderPotion src={potion} alt="potion" />
           </HeaderEnergyBar1>
         </HeaderNavWrapper>
-        <HeaderGame src={game} alt="game screen"></HeaderGame>
+        <HeaderGame src={game} className="" alt="game screen"></HeaderGame>
         {/* <MarketContainer className="scrollbar">
           <MarketNFTsList>
             {data.map((value, key) => {

@@ -14,12 +14,14 @@ import potion from "../assets/potion.svg";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import Link from "next/link";
+import Image from "next/image";
 import axios from "axios";
 
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding-top: 5rem;
   background: url("./assets/bg.png");
 `;
 const HeaderMobileContainer = styled.div`
@@ -50,14 +52,14 @@ const HeaderNavWrapper = styled.div`
   width: 100%;
 `;
 
-const HeaderImage = styled.img`
+const HeaderImage = styled(Image)`
   height: 10rem;
 `;
 
-const HeaderGame = styled.img`
+const HeaderGame = styled(Image)`
   position: relative;
   top: -4rem;
-  right: 7rem;
+  left: 7rem;
   bottom: 5rem;
   height: 30rem;
 `;
@@ -98,14 +100,14 @@ const HeaderBotButton = styled.div`
   }
 `;
 
-const HeaderTopBar = styled.img`
+const HeaderTopBar = styled(Image)`
   position: absolute;
   top: 0;
   z-index: 1;
   max-width: 99.99%;
 `;
 
-const HeaderTopBar1 = styled.img`
+const HeaderTopBar1 = styled(Image)`
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -127,17 +129,17 @@ const HeaderTokens1 = styled.div`
   margin-top: 1rem;
 `;
 
-const HeaderToken = styled.img`
+const HeaderToken = styled(Image)`
   width: 2rem;
   z-index: 2;
 `;
 
-const HeaderLightning = styled.img`
+const HeaderLightning = styled(Image)`
   position: relative;
   right: 3rem;
   width: 2rem;
 `;
-const HeaderPotion = styled.img`
+const HeaderPotion = styled(Image)`
   position: relative;
   left: 3.5rem;
   width: 2rem;
@@ -196,7 +198,7 @@ const HeaderBottomBarContainer = styled.div`
   bottom: 0;
 `;
 
-const HeaderBotomBarBG = styled.img`
+const HeaderBotomBarBG = styled(Image)`
   height: 100%;
   width: 100%;
 `;
@@ -286,17 +288,17 @@ export default function Play() {
               <HeaderButton style={{ backgroundImage: `url(${button})`} } >Home</HeaderButton>{" "}
             </Link> */}
           <Link href="/mycards" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               My Cards
             </HeaderButton>{" "}
           </Link>
           <Link href="/market" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               Market
             </HeaderButton>
           </Link>
           <Link href="/play" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               Play
             </HeaderButton>{" "}
           </Link>

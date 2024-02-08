@@ -12,6 +12,7 @@ import token1 from "../assets/token1.svg";
 import token2 from "../assets/token2.svg";
 import token3 from "../assets/token3.svg";
 import Link from "next/link";
+import Image from "next/image";
 import lightning from "../assets/lightning.svg";
 import potion from "../assets/potion.svg";
 import NFT1 from "../assets/NFTs/3.png";
@@ -31,6 +32,8 @@ const MarketContainer1 = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding-top: 5rem;
+  background: url("./assets/bg.png");
 `;
 
 const HeaderContainer1 = styled.div`
@@ -52,19 +55,19 @@ const HeaderButton = styled.div`
   position: relative;
   left: 1rem;
   width: 10rem;
+  background: url(${button});
   background-repeat: no-repeat;
   height: 3rem;
-  text-underline: none;
   text-decoration: none;
   &:active {
     transform: scale(0.9);
   }
 `;
 
-const HeaderGame = styled.img`
+const HeaderGame = styled(Image)`
   position: relative;
   top: -4rem;
-  right: 7rem;
+  left: 7rem;
   bottom: 5rem;
   height: 30rem;
 `;
@@ -78,7 +81,7 @@ const HeaderNavWrapper = styled.div`
   width: 100%;
 `;
 
-const HeaderImage = styled.img`
+const HeaderImage = styled(Image)`
   height: 10rem;
 `;
 
@@ -92,16 +95,16 @@ const HeaderTokens1 = styled.div`
   margin-top: 1rem;
 `;
 
-const HeaderToken = styled.img`
+const HeaderToken = styled(Image)`
   width: 2rem;
 `;
 
-const HeaderLightning = styled.img`
+const HeaderLightning = styled(Image)`
   position: relative;
   right: 3rem;
   width: 2rem;
 `;
-const HeaderPotion = styled.img`
+const HeaderPotion = styled(Image)`
   position: relative;
   left: 3.5rem;
   width: 2rem;
@@ -167,7 +170,7 @@ const HeaderTokens = styled.div`
   z-index: 2;
 `;
 
-const HeaderTopBar = styled.img`
+const HeaderTopBar = styled(Image)`
   position: absolute;
   top: 0;
   z-index: 1;
@@ -225,7 +228,7 @@ const HeaderBottomBarContainer = styled.div`
   bottom: 0;
 `;
 
-const HeaderBotomBarBG = styled.img`
+const HeaderBotomBarBG = styled(Image)`
   height: 100%;
   width: 100%;
 `;
@@ -249,7 +252,7 @@ const HeaderBotButton = styled.div`
   }
 `;
 
-const MarketNFTImages = styled.img`
+const MarketNFTImages = styled(Image)`
   height: 100px;
   width: 100px;
   cursor: pointer;
@@ -420,16 +423,16 @@ export default function Market() {
         </HeaderEnergyBar>
 
         <HeaderMobile className="scrollbars">
-          {NFTs.map((index, key) => {
+          {/* {NFTs.map((index, key) => {
             return (
               <MarketNFTImages key={key} onClick={() => setNFTs(index.page)} />
             );
-          })}
+          })} */}
         </HeaderMobile>
         <MarketNFTData>
-          {NFTs.map((item, key) => {
+          {/* {NFTs.map((item, key) => {
             if (nfts === item.page) return <div key={key} />;
-          })}
+          })} */}
         </MarketNFTData>
 
         <HeaderBottomBarContainer>
@@ -469,8 +472,8 @@ export default function Market() {
           </HeaderEnergyBar1>
         </HeaderNavWrapper>
         <HeaderGame src={game} alt="game screen" />
-        <MarketContainer className="scrollbars">
-          <MarketNFTsList className="scrollbars">
+        <MarketContainer>
+          {/* <MarketNFTsList className="scrollbars">
             {NFTs.map((index, key) => {
               return (
                 <MarketNFTImages
@@ -479,11 +482,11 @@ export default function Market() {
                 />
               );
             })}
-          </MarketNFTsList>
+          </MarketNFTsList> */}
           <MarketNFTData>
-            {NFTs.map((item, key) => {
+            {/* {NFTs.map((item, key) => {
               if (nfts === item.page) return <div key={key} />;
-            })}
+            })} */}
           </MarketNFTData>
         </MarketContainer>
         <HeaderContainer1>
@@ -491,17 +494,17 @@ export default function Market() {
             <HeaderButton style={{ backgroundImage: `url(${button})`} } >Home</HeaderButton>{" "}
           </Link> */}
           <Link href="/mycards" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               My Cards
             </HeaderButton>
           </Link>
           <Link href="/market" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               Market
             </HeaderButton>
           </Link>
           <Link href="/play" style={{ textDecorationLine: "none" }}>
-            <HeaderButton style={{ backgroundImage: `url(${button})` }}>
+            <HeaderButton style={{ backgroundImage: `url(${button.src})` }}>
               Play
             </HeaderButton>
           </Link>

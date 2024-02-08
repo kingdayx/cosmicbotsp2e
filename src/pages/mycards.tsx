@@ -286,7 +286,7 @@ const HeaderBotButton = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Mycards() {
   const [data, setData] = useState([]);
   const [walletAddress, setWalletAddress] = useState("");
   // Use the RPC endpoint of your choice.
@@ -403,7 +403,7 @@ export default function Header() {
                     alt={value.data.name}
                   />
                 </HeaderNFTContainer>
-              );.img
+              );
             })}
           </MarketNFTsList>
         </MarketContainer> */}

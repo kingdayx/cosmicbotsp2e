@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../pages/Header";
+import Mycards from "./mycards";
 
 const Home: NextPage = (props) => {
   return (
@@ -9,7 +9,7 @@ const Home: NextPage = (props) => {
         <title>Cosmic Bots</title>
         <meta name="Cosmic Bots" content="Cosmic Bots on Solana" />
       </Head>
-      <Header />
+      <Mycards />
     </div>
   );
 };
